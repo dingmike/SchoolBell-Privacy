@@ -148,40 +148,56 @@
             }
         };
 
-        function updateLang(lang) {
-            const t = i18n[lang] || i18n['en'];
-            document.getElementById('title').innerText = t.title;
-            document.getElementById('label-updated').innerText = t.updated;
-            document.getElementById('val-date').innerText = t.date;
-            document.getElementById('intro').innerText = t.intro;
-            document.getElementById('philosophy').innerText = t.philosophy;
-            document.getElementById('h1-title').innerText = t.h1t;
-            document.getElementById('h1-text').innerText = t.h1tx;
-            document.getElementById('h2-title').innerText = t.h2t;
-            document.getElementById('p1').innerText = t.p1;
-            document.getElementById('p2').innerText = t.p2;
-            document.getElementById('h3-title').innerText = t.h3t;
-            document.getElementById('h3-text').innerText = t.h3tx;
-            document.getElementById('h4-title').innerText = t.h4t;
-            document.getElementById('h4-text').innerText = t.h4tx;
-            document.getElementById('h5-title').innerText = t.h5t;
-            document.getElementById('h5-text').innerText = t.h5tx;
-            document.getElementById('social-text').innerText = t.social;
-            document.getElementById('copyright').innerText = t.copy;
-            document.documentElement.lang = lang;
-        }
+        <script>
+    function updateLang(lang) {
+        const t = i18n[lang] || i18n['en'];
+        document.getElementById('title').innerText = t.title;
+        document.getElementById('label-updated').innerText = t.updated;
+        document.getElementById('val-date').innerText = t.date;
+        document.getElementById('intro').innerText = t.intro;
+        document.getElementById('philosophy').innerText = t.philosophy;
+        document.getElementById('h1-title').innerText = t.h1t;
+        document.getElementById('h1-text').innerText = t.h1tx;
+        document.getElementById('h2-title').innerText = t.h2t;
+        document.getElementById('p1').innerText = t.p1;
+        document.getElementById('p2').innerText = t.p2;
+        document.getElementById('h3-title').innerText = t.h3t;
+        document.getElementById('h3-text').innerText = t.h3tx;
+        document.getElementById('h4-title').innerText = t.h4t;
+        document.getElementById('h4-text').innerText = t.h4tx;
+        document.getElementById('h5-title').innerText = t.h5t;
+        document.getElementById('h5-text').innerText = t.h5tx;
+        document.getElementById('social-text').innerText = t.social;
+        document.getElementById('copyright').innerText = t.copy;
+        document.documentElement.lang = lang;
+    }
 
-        const userLang = navigator.language || navigator.userLanguage;
-        let defaultLang = 'en';
-        if (userLang.includes('zh-CN')) defaultLang = 'zh-CN';
-        else if (userLang.includes('zh')) defaultLang = 'zh-TW';
-        else if (userLang.includes('ja')) defaultLang = 'ja';
-        else if (userLang.includes('ko')) defaultLang = 'ko';
-        else if (userLang.includes('de')) defaultLang = 'de';
-        else if (userLang.includes('fr')) defaultLang = 'fr';
+    // --- 修复后的自动识别逻辑 ---
+    const rawLang = navigator.language || navigator.userLanguage; // 获取如 "en-US"
+    const browserLang = rawLang.toLowerCase(); 
+    let defaultLang = 'en';
 
-        document.getElementById('lang-selector').value = defaultLang;
-        updateLang(defaultLang);
+    if (browserLang.includes('zh-cn')) {
+        defaultLang = 'zh-CN';
+    } else if (browserLang.includes('zh')) {
+        defaultLang = 'zh-TW';
+    } else if (browserLang.startsWith('ja')) {
+        defaultLang = 'ja';
+    } else if (browserLang.startsWith('ko')) {
+        defaultLang = 'ko';
+    } else if (browserLang.startsWith('de')) {
+        defaultLang = 'de';
+    } else if (browserLang.startsWith('fr')) {
+        defaultLang = 'fr';
+    } else {
+        defaultLang = 'en'; // 默认所有非以上语言（包括 en-US, en-GB）都走英语
+    }
+
+    // 执行初始化
+    document.getElementById('lang-selector').value = defaultLang;
+    updateLang(defaultLang);
+</script>
+
     </script>
 </body>
 </html>
