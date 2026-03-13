@@ -12,7 +12,7 @@
             --bg-color: #f5f5f7;
         }
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; 
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; 
             line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; color: #333; background-color: var(--bg-color); 
         }
         .nav { display: flex; justify-content: flex-end; margin-bottom: 20px; }
@@ -24,7 +24,6 @@
         p, li { font-size: 16px; color: #424245; }
         ul { padding-left: 20px; }
         a { color: var(--apple-blue); text-decoration: none; }
-        a:hover { text-decoration: underline; }
         .footer { margin-top: 50px; font-size: 13px; color: var(--apple-grey); border-top: 1px solid #eee; padding-top: 20px; text-align: center; }
         
         @media (max-width: 600px) { .container { padding: 25px; } h1 { font-size: 24px; } }
@@ -43,32 +42,32 @@
         </select>
     </div>
 
-    <div class="container" id="content">
+    <div class="container">
         <h1 id="title">Privacy Policy</h1>
         <p><strong id="label-updated">Last Updated:</strong> <span id="val-date">March 10, 2026</span></p>
 
-        <p><strong id="app-name">🔔 SchoolBell</strong> <span id="intro">is committed to protecting your privacy. This policy explains how we handle your information. Our philosophy is simple:</span> <strong id="philosophy">We do not collect your data.</strong></p>
+        <p><strong id="app-name">🔔 SchoolBell</strong> <span id="intro">is committed to protecting your privacy.</span> <strong id="philosophy">We do not collect your data.</strong></p>
 
         <h2 id="h1-title">1. Data Collection and Usage</h2>
-        <p id="h1-text">SchoolBell is a local utility application. We <strong>do NOT collect, store, or transmit</strong> any of your personally identifiable information (PII). All your schedule settings, bell configurations, and preferences are stored exclusively on your device's local storage (UserDefaults) and are never uploaded to any servers.</p>
+        <p id="h1-text">SchoolBell is a local utility application...</p>
 
         <h2 id="h2-title">2. Permissions and Their Purpose</h2>
         <ul>
-            <li id="p1"><strong>Notifications:</strong> Used solely to trigger the bell alerts and reminders at your scheduled times.</li>
-            <li id="p2"><strong>Background Audio:</strong> Used to ensure high-fidelity playback of your selected bell sounds even when the screen is locked or the app is in the background.</li>
+            <li id="p1">Notifications</li>
+            <li id="p2">Background Audio</li>
         </ul>
 
         <h2 id="h3-title">3. Third-Party Services</h2>
-        <p id="h3-text">We do not use any third-party SDKs, tracking tools, or advertising networks. Your behavior within the app is not monitored by any third parties.</p>
+        <p id="h3-text">We do not use any third-party SDKs...</p>
 
         <h2 id="h4-title">4. Data Security</h2>
-        <p id="h4-text">Since all data remains on your device, the security of your information is protected by iOS system encryption. Deleting the app will also remove all locally stored settings.</p>
+        <p id="h4-text">All data remains on your device...</p>
 
         <h2 id="h5-title">5. Contact Us</h2>
-        <p id="h5-text">If you have any questions regarding this Privacy Policy, please contact us at:</p>
+        <p id="h5-text">If you have any questions...</p>
         <p><strong><a href="mailto:mikezhagnding@gmail.com">mikezhangding@gmail.com</a></strong></p>
         <p id="social-text">Follow updates on X:</p>
-        <p><a href="http://x.com/chiodeikun">@chiodeikun</a></p>
+        <p><a href="http://x.com">@chiodeikun</a></p>
         
         <div class="footer">
             <p id="copyright">&copy; 2026 SchoolBell. All rights reserved.</p>
@@ -94,57 +93,57 @@
                 h1t: "1. 数据收集与使用", h1tx: "SchoolBell 是一款本地工具应用。我们不收集、不存储、也不传输任何您的个人身份信息 (PII)。您的所有课表设置和偏好仅存储在设备的本地存储中。",
                 h2t: "2. 权限说明", p1: "通知：仅用于在您预设的时间触发铃声提醒。", p2: "后台音频：确保在屏幕锁定或应用后台运行时，铃声能正常播放。",
                 h3t: "3. 第三方服务", h3tx: "我们不使用任何第三方 SDK、追踪工具或广告网络。",
-                h4t: "4. 数据安全", h4tx: "由于所有数据都保留在您的设备上，您的信息安全受 iOS 系统加密保护。删除应用将同时清除所有本地设置。",
+                h4t: "4. 数据安全", h4tx: "由于所有数据都保留在您的设备上，您的信息安全受 iOS 系统加密保护。",
                 h5t: "5. 联系我们", h5tx: "如果您对本隐私政策有任何疑问，请联系我们：", social: "在 X 上关注更新：", copy: "© 2026 SchoolBell. 保留所有权利。"
             },
             'zh-TW': {
                 title: "隱私政策", date: "2026年3月10日", updated: "最後更新日期：",
                 intro: "致力於保護您的隱私。本政策說明了我們如何處理您的資訊。我們的理念很簡單：",
                 philosophy: "我們不收集您的任何數據。",
-                h1t: "1. 數據收集與使用", h1tx: "SchoolBell 是一款本地工具應用。我們不收集、不存儲、也不傳輸任何您的個人身份資訊 (PII)。您的所有課表設置和偏好僅存儲在設備的本地存儲中。",
+                h1t: "1. 數據收集與使用", h1tx: "SchoolBell 是一款本地工具應用。我們不收集、不存儲、也不傳輸任何您的個人身份資訊 (PII)。",
                 h2t: "2. 權限說明", p1: "通知：僅用於在您預設的時間觸發鈴聲提醒。", p2: "後台音訊：確保在屏幕鎖定或應用後台運行時，鈴聲能正常播放。",
                 h3t: "3. 第三方服務", h3tx: "我們不使用任何第三方 SDK、追蹤工具或廣告網絡。",
-                h4t: "4. 數據安全", h4tx: "由於所有數據都保留在您的設備上，您的資訊安全受 iOS 系統加密保護。刪除應用將同時清除所有本地設置。",
+                h4t: "4. 數據安全", h4tx: "由於所有數據都保留在您的設備上，您的資訊安全受 iOS 系統加密保護。",
                 h5t: "5. 聯繫我們", h5tx: "如果您對本隱私政策有任何疑問，請聯繫我們：", social: "在 X 上關注更新：", copy: "© 2026 SchoolBell. 保留所有權利。"
             },
             'ja': {
                 title: "プライバシーポリシー", date: "2026年3月10日", updated: "最終更新日：",
-                intro: "は、お客様のプライバシー保護に努めています。このポリシーでは、情報の取り扱いについて説明します。私たちの哲学は単純です：",
+                intro: "は、お客様のプライバシー保護に努めています。私たちの哲学は単純です：",
                 philosophy: "データは一切収集しません。",
-                h1t: "1. データの収集と使用", h1tx: "SchoolBell はローカルユーティリティアプリです。個人を特定できる情報 (PII) を収集、保存、または送信することはありません。すべての設定はデバイスにローカルに保存されます。",
-                h2t: "2. 権限とその目的", p1: "通知：スケジュールされた時間にアラートをトリガーするためにのみ使用されます。", p2: "バックグラウンドオーディオ：ロック中やバックグラウンドでもベル音を再生するために使用されます。",
+                h1t: "1. データの収集と使用", h1tx: "SchoolBell はローカルユーティリティアプリです。個人を特定できる情報 (PII) を収集することはありません。",
+                h2t: "2. 権限とその目的", p1: "通知：スケジュールされた時間にアラートをトリガーするためにのみ使用されます。", p2: "バックグラウンドオーディオ：ロック中やバックグラウンドでも音を再生するために使用されます。",
                 h3t: "3. サードパーティサービス", h3tx: "サードパーティのSDK、追跡ツール、または広告ネットワークは使用していません。",
                 h4t: "4. データセキュリティ", h4tx: "すべてのデータはデバイスに残り、iOSシステムによって保護されます。",
                 h5t: "5. お問い合わせ", h5tx: "ご質問がある場合は、こちらまでご連絡ください：", social: "Xで更新をフォロー：", copy: "© 2026 SchoolBell. All rights reserved."
             },
             'ko': {
                 title: "개인정보 처리방침", date: "2026년 3월 10일", updated: "최종 수정일:",
-                intro: "은 귀하의 개인정보 보호를 위해 최선을 다하고 있습니다. 이 방침은 귀하의 정보 처리 방식을 설명합니다. 우리의 철학은 간단합니다:",
+                intro: "은 귀하의 개인정보 보호를 위해 최선을 다하고 있습니다. 우리의 철학은 간단합니다:",
                 philosophy: "우리는 데이터를 수집하지 않습니다.",
-                h1t: "1. 데이터 수집 및 사용", h1tx: "SchoolBell은 로컬 유틸리티 앱입니다. 당사는 어떠한 개인 식별 정보(PII)도 수집, 저장 또는 전송하지 않습니다. 모든 설정은 귀하의 기기에만 저장됩니다.",
-                h2t: "2. 권한 및 목적", p1: "알림: 예약된 시간에 벨 소리 및 미리 알림을 트리거하는 데만 사용됩니다.", p2: "백그라운드 오디오: 화면이 잠겨 있거나 앱이 백그라운드에 있을 때도 벨 소리가 재생되도록 하는 데 사용됩니다.",
-                h3t: "3. 제3자 서비스", h3tx: "당사는 제3자 SDK, 추적 도구 또는 광고 네트워크를 사용하지 않습니다.",
-                h4t: "4. 데이터 보안", h4tx: "모든 데이터는 기기에 남아 있으며 iOS 시스템 암호화에 의해 보호됩니다.",
-                h5t: "5. 문의하기", h5tx: "본 방침에 대해 질문이 있는 경우 다음으로 연락해 주십시오:", social: "X에서 업데이트 팔로우:", copy: "© 2026 SchoolBell. All rights reserved."
+                h1t: "1. 데이터 수집 및 사용", h1tx: "SchoolBell은 로컬 유틸리티 앱입니다. 당사는 어떠한 개인 식별 정보(PII)도 수집하지 않습니다.",
+                h2t: "2. 권한 및 목적", p1: "알림: 예약된 시간에 벨 소리를 트리거하는 데만 사용됩니다.", p2: "백그라운드 오디오: 백그라운드에서 벨 소리가 재생되도록 하는 데 사용됩니다.",
+                h3t: "3. 제3자 서비스", h3tx: "당사는 제3자 SDK나 광고 네트워크를 사용하지 않습니다.",
+                h4t: "4. 데이터 보안", h4tx: "모든 데이터는 기기에 남아 있으며 iOS 시스템에 의해 보호됩니다.",
+                h5t: "5. 문의하기", h5tx: "질문이 있는 경우 다음으로 연락해 주십시오:", social: "X에서 업데이트 팔로우:", copy: "© 2026 SchoolBell. All rights reserved."
             },
             'de': {
                 title: "Datenschutzerklärung", date: "10. März 2026", updated: "Zuletzt aktualisiert:",
                 intro: "setzt sich für den Schutz Ihrer Privatsphäre ein. Unsere Philosophie ist einfach:",
                 philosophy: "Wir sammeln keine Daten von Ihnen.",
-                h1t: "1. Datenerhebung und -verwendung", h1tx: "SchoolBell ist eine lokale Anwendung. Wir sammeln, speichern oder übertragen KEINE personenbezogenen Daten (PII). Alle Einstellungen werden lokal auf Ihrem Gerät gespeichert.",
-                h2t: "2. Berechtigungen", p1: "Mitteilungen: Nur zum Auslösen der Alarme zu Ihren geplanten Zeiten.", p2: "Hintergrund-Audio: Stellt sicher, dass die Töne auch im Hintergrund oder bei Sperrung abgespielt werden.",
+                h1t: "1. Datenerhebung und -verwendung", h1tx: "SchoolBell ist eine lokale Anwendung. Wir sammeln KEINE personenbezogenen Daten.",
+                h2t: "2. Berechtigungen", p1: "Mitteilungen: Nur zum Auslösen der Alarme zu Ihren geplanten Zeiten.", p2: "Hintergrund-Audio: Stellt sicher, dass die Töne im Hintergrund abgespielt werden.",
                 h3t: "3. Drittanbieter", h3tx: "Wir verwenden keine SDKs von Drittanbietern oder Werbenetzwerke.",
-                h4t: "4. Datensicherheit", h4tx: "Alle Daten verbleiben auf Ihrem Gerät und sind durch die iOS-Verschlüsselung geschützt.",
+                h4t: "4. Datensicherheit", h4tx: "Alle Daten verbleiben auf Ihrem Gerät und sind durch iOS geschützt.",
                 h5t: "5. Kontakt", h5tx: "Bei Fragen kontaktieren Sie uns bitte unter:", social: "Updates auf X folgen:", copy: "© 2026 SchoolBell. Alle Rechte vorbehalten."
             },
             'fr': {
                 title: "Politique de Confidentialité", date: "10 mars 2026", updated: "Dernière mise à jour :",
                 intro: "s'engage à protéger votre vie privée. Notre philosophie est simple :",
                 philosophy: "Nous ne collectons pas vos données.",
-                h1t: "1. Collecte et utilisation des données", h1tx: "SchoolBell est une application locale. Nous ne collectons, ne stockons ni ne transmettons aucune donnée personnelle (PII). Toutes les configurations sont stockées localement.",
-                h2t: "2. Autorisations", p1: "Notifications : Utilisées uniquement pour déclencher les alertes aux heures prévues.", p2: "Audio en arrière-plan : Garantit la lecture des sons même lorsque l'écran est verrouillé.",
+                h1t: "1. Collecte et utilisation des données", h1tx: "SchoolBell est une application locale. Nous ne collectons aucune donnée personnelle.",
+                h2t: "2. Autorisations", p1: "Notifications : Utilisées uniquement pour déclencher les alertes.", p2: "Audio en arrière-plan : Garantit la lecture des sons en arrière-plan.",
                 h3t: "3. Services tiers", h3tx: "Nous n'utilisons aucun SDK tiers ni réseau publicitaire.",
-                h4t: "4. Sécurité des données", h4tx: "Toutes les données restent sur votre appareil, protégées par le cryptage iOS.",
+                h4t: "4. Sécurité des données", h4tx: "Toutes les données restent sur votre appareil, protégées par iOS.",
                 h5t: "5. Contactez-nous", h5tx: "Si vous avez des questions, veuillez nous contacter à :", social: "Suivez les mises à jour sur X :", copy: "© 2026 SchoolBell. Tous droits réservés."
             }
         };
@@ -159,8 +158,8 @@
             document.getElementById('h1-title').innerText = t.h1t;
             document.getElementById('h1-text').innerText = t.h1tx;
             document.getElementById('h2-title').innerText = t.h2t;
-            document.getElementById('p1').innerHTML = "<strong>" + t.p1.split(':')[0] + ":</strong>" + t.p1.split(':')[1];
-            document.getElementById('p2').innerHTML = "<strong>" + t.p2.split(':')[0] + ":</strong>" + t.p2.split(':')[1];
+            document.getElementById('p1').innerText = t.p1;
+            document.getElementById('p2').innerText = t.p2;
             document.getElementById('h3-title').innerText = t.h3t;
             document.getElementById('h3-text').innerText = t.h3tx;
             document.getElementById('h4-title').innerText = t.h4t;
@@ -172,7 +171,6 @@
             document.documentElement.lang = lang;
         }
 
-        // 自动识别系统语言
         const userLang = navigator.language || navigator.userLanguage;
         let defaultLang = 'en';
         if (userLang.includes('zh-CN')) defaultLang = 'zh-CN';
