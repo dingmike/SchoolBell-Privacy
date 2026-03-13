@@ -12,44 +12,25 @@
             --bg-color: #f5f5f7;
         }
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; 
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; 
             line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; color: #333; background-color: var(--bg-color); 
-            -webkit-font-smoothing: antialiased;
         }
-        /* 顶部导航与语言切换 */
-        .nav { 
-            display: flex; justify-content: space-between; align-items: center; 
-            margin-bottom: 20px; padding: 10px 0;
-        }
-        .nav-logo { font-weight: 600; font-size: 18px; color: var(--apple-black); }
-        select { 
-            border: 1px solid #d2d2d7; border-radius: 8px; padding: 6px 12px; 
-            font-size: 14px; background: white; cursor: pointer; outline: none;
-        }
+        .nav { display: flex; justify-content: flex-end; margin-bottom: 20px; }
+        select { border: 1px solid #d2d2d7; border-radius: 8px; padding: 5px 10px; font-size: 14px; background: white; cursor: pointer; outline: none; }
         
-        /* 内容容器 */
-        .container { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 4px 30px rgba(0,0,0,0.05); }
-        h1 { color: var(--apple-blue); font-size: 32px; font-weight: 700; border-bottom: 1px solid #eee; padding-bottom: 20px; margin-top: 0; letter-spacing: -0.02em; }
-        h2 { color: var(--apple-black); font-size: 22px; margin-top: 35px; font-weight: 600; letter-spacing: -0.01em; }
-        p, li { font-size: 17px; color: #424245; }
-        ul { padding-left: 20px; margin-bottom: 20px; }
-        li { margin-bottom: 10px; }
-        a { color: var(--apple-blue); text-decoration: none; transition: 0.2s; }
-        a:hover { text-decoration: underline; }
+        .container { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        h1 { color: var(--apple-blue); font-size: 28px; font-weight: 600; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-top: 0; }
+        h2 { color: var(--apple-black); font-size: 20px; margin-top: 30px; font-weight: 600; }
+        p, li { font-size: 16px; color: #424245; }
+        ul { padding-left: 20px; }
+        a { color: var(--apple-blue); text-decoration: none; }
+        .footer { margin-top: 50px; font-size: 13px; color: var(--apple-grey); border-top: 1px solid #eee; padding-top: 20px; text-align: center; }
         
-        /* 页脚 */
-        .footer { margin-top: 60px; font-size: 13px; color: var(--apple-grey); border-top: 1px solid #eee; padding-top: 30px; text-align: center; }
-        
-        @media (max-width: 600px) { 
-            .container { padding: 25px; } 
-            h1 { font-size: 26px; }
-            .nav-logo { font-size: 16px; }
-        }
+        @media (max-width: 600px) { .container { padding: 25px; } h1 { font-size: 24px; } }
     </style>
 </head>
 <body>
     <div class="nav">
-        <div class="nav-logo">🔔 SchoolBell</div>
         <select id="lang-selector" onchange="updateLang(this.value)">
             <option value="en">English</option>
             <option value="zh-CN">简体中文</option>
@@ -65,7 +46,7 @@
         <h1 id="title">Privacy Policy</h1>
         <p><strong id="label-updated">Last Updated:</strong> <span id="val-date">March 10, 2026</span></p>
 
-        <p><strong id="app-name">SchoolBell</strong> <span id="intro">is committed to protecting your privacy.</span> <strong id="philosophy">We do not collect your data.</strong></p>
+        <p><strong id="app-name">🔔 SchoolBell</strong> <span id="intro">is committed to protecting your privacy.</span> <strong id="philosophy">We do not collect your data.</strong></p>
 
         <h2 id="h1-title">1. Data Collection and Usage</h2>
         <p id="h1-text">SchoolBell is a local utility application...</p>
@@ -96,27 +77,27 @@
     <script>
         const i18n = {
             'en': {
-                title: "Privacy Policy", date: "March 12, 2026", updated: "Last Updated:",
+                title: "Privacy Policy", date: "March 10, 2026", updated: "Last Updated:",
                 intro: "is committed to protecting your privacy. This policy explains how we handle your information. Our philosophy is simple:",
                 philosophy: "We do not collect your data.",
                 h1t: "1. Data Collection and Usage", h1tx: "SchoolBell is a local utility application. We do NOT collect, store, or transmit any of your personally identifiable information (PII). All your settings are stored locally on your device.",
                 h2t: "2. Permissions and Their Purpose", p1: "Notifications: Used solely to trigger alerts at your scheduled times.", p2: "Background Audio: Used to ensure bell sounds play when locked or in background.",
-                h3t: "3. Third-Party Services", h3tx: "We do not use any third-party SDKs, tracking tools, or advertising networks. Your behavior is not monitored.",
-                h4t: "4. Data Security", h4tx: "All data remains on your device, protected by iOS system encryption. Deleting the app removes all locally stored settings.",
-                h5t: "5. Contact Us", h5tx: "If you have any questions regarding this policy, please contact us at:", social: "Follow updates on X:", copy: "© 2026 SchoolBell. All rights reserved."
+                h3t: "3. Third-Party Services", h3tx: "We do not use any third-party SDKs, tracking tools, or advertising networks.",
+                h4t: "4. Data Security", h4tx: "All data remains on your device, protected by iOS system encryption.",
+                h5t: "5. Contact Us", h5tx: "If you have any questions, please contact us at:", social: "Follow updates on X:", copy: "© 2026 SchoolBell. All rights reserved."
             },
             'zh-CN': {
-                title: "隐私政策", date: "2026年3月12日", updated: "最后更新日期：",
+                title: "隐私政策", date: "2026年3月10日", updated: "最后更新日期：",
                 intro: "致力于保护您的隐私。本政策说明了我们如何处理您的信息。我们的理念很简单：",
                 philosophy: "我们不收集您的任何数据。",
                 h1t: "1. 数据收集与使用", h1tx: "SchoolBell 是一款本地工具应用。我们不收集、不存储、也不传输任何您的个人身份信息 (PII)。您的所有课表设置和偏好仅存储在设备的本地存储中。",
                 h2t: "2. 权限说明", p1: "通知：仅用于在您预设的时间触发铃声提醒。", p2: "后台音频：确保在屏幕锁定或应用后台运行时，铃声能正常播放。",
-                h3t: "3. 第三方服务", h3tx: "我们不使用任何第三方 SDK、追踪工具或广告网络。您的应用内行为不会被监控。",
-                h4t: "4. 数据安全", h4tx: "由于所有数据都保留在您的设备上，您的信息安全受 iOS 系统加密保护。删除应用将同时清除所有本地设置。",
-                h5t: "5. 联系我们", h5tx: "如果您对本隐私政策有任何疑问，请通过以下方式联系：", social: "在 X 上关注更新：", copy: "© 2026 SchoolBell. 保留所有权利。"
+                h3t: "3. 第三方服务", h3tx: "我们不使用任何第三方 SDK、追踪工具或广告网络。",
+                h4t: "4. 数据安全", h4tx: "由于所有数据都保留在您的设备上，您的信息安全受 iOS 系统加密保护。",
+                h5t: "5. 联系我们", h5tx: "如果您对本隐私政策有任何疑问，请联系我们：", social: "在 X 上关注更新：", copy: "© 2026 SchoolBell. 保留所有权利。"
             },
             'zh-TW': {
-                title: "隱私政策", date: "2026年3月12日", updated: "最後更新日期：",
+                title: "隱私政策", date: "2026年3月10日", updated: "最後更新日期：",
                 intro: "致力於保護您的隱私。本政策說明了我們如何處理您的資訊。我們的理念很簡單：",
                 philosophy: "我們不收集您的任何數據。",
                 h1t: "1. 數據收集與使用", h1tx: "SchoolBell 是一款本地工具應用。我們不收集、不存儲、也不傳輸任何您的個人身份資訊 (PII)。",
@@ -126,17 +107,17 @@
                 h5t: "5. 聯繫我們", h5tx: "如果您對本隱私政策有任何疑問，請聯繫我們：", social: "在 X 上關注更新：", copy: "© 2026 SchoolBell. 保留所有權利。"
             },
             'ja': {
-                title: "プライバシーポリシー", date: "2026年3月12日", updated: "最終更新日：",
+                title: "プライバシーポリシー", date: "2026年3月10日", updated: "最終更新日：",
                 intro: "は、お客様のプライバシー保護に努めています。私たちの哲学は単純です：",
                 philosophy: "データは一切収集しません。",
-                h1t: "1. データの収集と使用", h1tx: "SchoolBell はローカルユーティリティアプリです。個人を特定できる情報を収集、保存、または送信することはありません。",
+                h1t: "1. データの収集と使用", h1tx: "SchoolBell はローカルユーティリティアプリです。個人を特定できる情報 (PII) を収集することはありません。",
                 h2t: "2. 権限とその目的", p1: "通知：スケジュールされた時間にアラートをトリガーするためにのみ使用されます。", p2: "バックグラウンドオーディオ：ロック中やバックグラウンドでも音を再生するために使用されます。",
                 h3t: "3. サードパーティサービス", h3tx: "サードパーティのSDK、追跡ツール、または広告ネットワークは使用していません。",
                 h4t: "4. データセキュリティ", h4tx: "すべてのデータはデバイスに残り、iOSシステムによって保護されます。",
                 h5t: "5. お問い合わせ", h5tx: "ご質問がある場合は、こちらまでご連絡ください：", social: "Xで更新をフォロー：", copy: "© 2026 SchoolBell. All rights reserved."
             },
             'ko': {
-                title: "개인정보 처리방침", date: "2026년 3월 12일", updated: "최종 수정일:",
+                title: "개인정보 처리방침", date: "2026년 3월 10일", updated: "최종 수정일:",
                 intro: "은 귀하의 개인정보 보호를 위해 최선을 다하고 있습니다. 우리의 철학은 간단합니다:",
                 philosophy: "우리는 데이터를 수집하지 않습니다.",
                 h1t: "1. 데이터 수집 및 사용", h1tx: "SchoolBell은 로컬 유틸리티 앱입니다. 당사는 어떠한 개인 식별 정보(PII)도 수집하지 않습니다.",
@@ -146,7 +127,7 @@
                 h5t: "5. 문의하기", h5tx: "질문이 있는 경우 다음으로 연락해 주십시오:", social: "X에서 업데이트 팔로우:", copy: "© 2026 SchoolBell. All rights reserved."
             },
             'de': {
-                title: "Datenschutzerklärung", date: "12. März 2026", updated: "Zuletzt aktualisiert:",
+                title: "Datenschutzerklärung", date: "10. März 2026", updated: "Zuletzt aktualisiert:",
                 intro: "setzt sich für den Schutz Ihrer Privatsphäre ein. Unsere Philosophie ist einfach:",
                 philosophy: "Wir sammeln keine Daten von Ihnen.",
                 h1t: "1. Datenerhebung und -verwendung", h1tx: "SchoolBell ist eine lokale Anwendung. Wir sammeln KEINE personenbezogenen Daten.",
@@ -156,7 +137,7 @@
                 h5t: "5. Kontakt", h5tx: "Bei Fragen kontaktieren Sie uns bitte unter:", social: "Updates auf X folgen:", copy: "© 2026 SchoolBell. Alle Rechte vorbehalten."
             },
             'fr': {
-                title: "Politique de Confidentialité", date: "12 mars 2026", updated: "Dernière mise à jour :",
+                title: "Politique de Confidentialité", date: "10 mars 2026", updated: "Dernière mise à jour :",
                 intro: "s'engage à protéger votre vie privée. Notre philosophie est simple :",
                 philosophy: "Nous ne collectons pas vos données.",
                 h1t: "1. Collecte et utilisation des données", h1tx: "SchoolBell est une application locale. Nous ne collectons aucune donnée personnelle.",
@@ -167,49 +148,94 @@
             }
         };
 
-        function updateLang(lang) {
-            const t = i18n[lang] || i18n['en'];
-            
-            // 文本内容赋值
-            document.getElementById('title').innerText = t.title;
-            document.getElementById('label-updated').innerText = t.updated;
-            document.getElementById('val-date').innerText = t.date;
-            document.getElementById('intro').innerText = t.intro;
-            document.getElementById('philosophy').innerText = t.philosophy;
-            document.getElementById('h1-title').innerText = t.h1t;
-            document.getElementById('h1-text').innerText = t.h1tx;
-            document.getElementById('h2-title').innerText = t.h2t;
-            document.getElementById('p1').innerText = t.p1;
-            document.getElementById('p2').innerText = t.p2;
-            document.getElementById('h3-title').innerText = t.h3t;
-            document.getElementById('h3-text').innerText = t.h3tx;
-            document.getElementById('h4-title').innerText = t.h4t;
-            document.getElementById('h4-text').innerText = t.h4tx;
-            document.getElementById('h5-title').innerText = t.h5t;
-            document.getElementById('h5-text').innerText = t.h5tx;
-            document.getElementById('social-text').innerText = t.social;
-            document.getElementById('copyright').innerText = t.copy;
-            
-            // 状态同步
-            document.documentElement.lang = lang;
-            document.getElementById('lang-selector').value = lang;
-        }
+        // function updateLang(lang) {
+        //     const t = i18n[lang] || i18n['en'];
+        //     document.getElementById('title').innerText = t.title;
+        //     document.getElementById('label-updated').innerText = t.updated;
+        //     document.getElementById('val-date').innerText = t.date;
+        //     document.getElementById('intro').innerText = t.intro;
+        //     document.getElementById('philosophy').innerText = t.philosophy;
+        //     document.getElementById('h1-title').innerText = t.h1t;
+        //     document.getElementById('h1-text').innerText = t.h1tx;
+        //     document.getElementById('h2-title').innerText = t.h2t;
+        //     document.getElementById('p1').innerText = t.p1;
+        //     document.getElementById('p2').innerText = t.p2;
+        //     document.getElementById('h3-title').innerText = t.h3t;
+        //     document.getElementById('h3-text').innerText = t.h3tx;
+        //     document.getElementById('h4-title').innerText = t.h4t;
+        //     document.getElementById('h4-text').innerText = t.h4tx;
+        //     document.getElementById('h5-title').innerText = t.h5t;
+        //     document.getElementById('h5-text').innerText = t.h5tx;
+        //     document.getElementById('social-text').innerText = t.social;
+        //     document.getElementById('copyright').innerText = t.copy;
+        //     document.documentElement.lang = lang;
+        // }
 
-        // 初始化：自动检测语言并执行第一次渲染
-        window.onload = function() {
-            const rawLang = (navigator.language || navigator.userLanguage).toLowerCase();
-            let defaultLang = 'en';
+        // const userLang = navigator.language || navigator.userLanguage;
+        // let defaultLang = 'en';
+        // if (userLang.includes('zh-CN')) defaultLang = 'zh-CN';
+        // else if (userLang.includes('zh')) defaultLang = 'zh-TW';
+        // else if (userLang.includes('ja')) defaultLang = 'ja';
+        // else if (userLang.includes('ko')) defaultLang = 'ko';
+        // else if (userLang.includes('de')) defaultLang = 'de';
+        // else if (userLang.includes('fr')) defaultLang = 'fr';
 
-            if (rawLang.includes('zh-cn')) defaultLang = 'zh-CN';
-            else if (rawLang.includes('zh')) defaultLang = 'zh-TW';
-            else if (rawLang.startsWith('ja')) defaultLang = 'ja';
-            else if (rawLang.startsWith('ko')) defaultLang = 'ko';
-            else if (rawLang.startsWith('de')) defaultLang = 'de';
-            else if (rawLang.startsWith('fr')) defaultLang = 'fr';
-            else defaultLang = 'en';
+        // document.getElementById('lang-selector').value = defaultLang;
+        // updateLang(defaultLang);
 
-            updateLang(defaultLang);
-        };
+
+
+        
+    // ... 保持之前的 i18n 对象不变 ...
+
+    function updateLang(lang) {
+        const t = i18n[lang] || i18n['en'];
+        document.getElementById('title').innerText = t.title;
+        document.getElementById('label-updated').innerText = t.updated;
+        document.getElementById('val-date').innerText = t.date;
+        document.getElementById('intro').innerText = t.intro;
+        document.getElementById('philosophy').innerText = t.philosophy;
+        document.getElementById('h1-title').innerText = t.h1t;
+        document.getElementById('h1-text').innerText = t.h1tx;
+        document.getElementById('h2-title').innerText = t.h2t;
+        document.getElementById('p1').innerText = t.p1;
+        document.getElementById('p2').innerText = t.p2;
+        document.getElementById('h3-title').innerText = t.h3t;
+        document.getElementById('h3-text').innerText = t.h3tx;
+        document.getElementById('h4-title').innerText = t.h4t;
+        document.getElementById('h4-text').innerText = t.h4tx;
+        document.getElementById('h5-title').innerText = t.h5t;
+        document.getElementById('h5-text').innerText = t.h5tx;
+        document.getElementById('social-text').innerText = t.social;
+        document.getElementById('copyright').innerText = t.copy;
+        document.documentElement.lang = lang;
+    }
+
+    // --- 修复后的自动识别逻辑 ---
+    const rawLang = navigator.language || navigator.userLanguage; // 获取如 "en-US"
+    const browserLang = rawLang.toLowerCase(); 
+    let defaultLang = 'en';
+
+    if (browserLang.includes('zh-cn')) {
+        defaultLang = 'zh-CN';
+    } else if (browserLang.includes('zh')) {
+        defaultLang = 'zh-TW';
+    } else if (browserLang.startsWith('ja')) {
+        defaultLang = 'ja';
+    } else if (browserLang.startsWith('ko')) {
+        defaultLang = 'ko';
+    } else if (browserLang.startsWith('de')) {
+        defaultLang = 'de';
+    } else if (browserLang.startsWith('fr')) {
+        defaultLang = 'fr';
+    } else {
+        defaultLang = 'en'; // 默认所有非以上语言（包括 en-US, en-GB）都走英语
+    }
+
+    // 执行初始化
+    document.getElementById('lang-selector').value = defaultLang;
+    updateLang(defaultLang);
+
     </script>
 </body>
 </html>
